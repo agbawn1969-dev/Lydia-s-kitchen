@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glow Beauty</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #fffaf7;
+      color: #333;
+    }
+
+    /* Navigation */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 10%;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    nav .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #e07a5f;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #e07a5f;
+    }
+
+    /* Hero */
+    header {
+      background: url('blackie.jpg') no-repeat center/cover;
+      height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      margin-top: 70px;
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.4);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      color: #fff;
+    }
+
+    .hero-content h1 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    .hero-content a {
+      text-decoration: none;
+      background: #e07a5f;
+      color: #fff;
+      padding: 12px 25px;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .hero-content a:hover {
+      background: #c8644a;
+    }
+
+    /* Products */
+    .products {
+      padding: 70px 10%;
+      text-align: center;
+      background: #fff;
+    }
+
+    .products h2 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+      color: #e07a5f;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .product {
+      background: #fffaf7;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: 0.3s;
+    }
+
+    .product img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .product h3 {
+      margin: 15px 0 5px;
+    }
+
+    .product p {
+      color: #666;
+      font-size: 0.95rem;
+      margin-bottom: 10px;
+    }
+
+    .product a {
+      display: inline-block;
+      margin-bottom: 15px;
+      padding: 8px 18px;
+      background: #e07a5f;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 0.9rem;
+      transition: 0.3s;
+    }
+
+    .product a:hover {
+      background: #c8644a;
+    }
+
+    /* About */
+    .about {
+      background: #fbeee6;
+      padding: 80px 10%;
+      text-align: center;
+    }
+
+    .about h2 {
+      color: #e07a5f;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .about p {
+      color: #555;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* Footer */
+    footer {
+      background: #333;
+      color: #eee;
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">Glow Beauty</div>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Products</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <header>
+    <div class="hero-content">
+      <h1>Discover Your Natural Glow</h1>
+      <p>Premium beauty products made from natural ingredients</p>
+      <a href="#">Shop Now</a>
+    </div>
+  </header>
+
+  <!-- Products Section -->
+  <section class="products">
+    <h2>Our Bestsellers</h2>
+    <div class="product-grid">
+      <div class="product">
+        <img src="moisture.jpg" alt="Product 1">
+        <h3>Luxury Face Cream</h3>
+        <p>Hydrate & rejuvenate your skin naturally.</p>
+        <a href="#">Buy Now</a>
+      </div>
+      <div class="product">
+        <img src="herbal.jpg" alt="Product 2">
+        <h3>Herbal Body Oil</h3>
+        <p>Relaxing oil blend for glowing skin.</p>
+        <a href="#">Buy Now</a>
+      </div>
+      <div class="product">
+        <img src="lippy.jpg" alt="Product 3">
+        <h3>Organic Lip Balm</h3>
+        <p>Soft, nourished lips with natural shine.</p>
+        <a href="#">Buy Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about">
+    <h2>Why Choose Us?</h2>
+    <p>
+      At Glow Beauty, we believe that real beauty comes from nature.
+      Our products are made with carefully selected natural ingredients
+      that care for your skin while respecting the environment.
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Glow Beauty | All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>  that care for your skin while respecting the environment.
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Glow Beauty | All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
